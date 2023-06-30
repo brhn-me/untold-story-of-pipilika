@@ -1,8 +1,10 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
+
 const config: DocsThemeConfig = {
   logo: <span><img src='/static/pipilika/logo-small.png' /></span>,
+  logoLink: '/',
   // project: {
   //   link: 'https://github.com/shuding/nextra-docs-template',
   // },
@@ -20,6 +22,11 @@ const config: DocsThemeConfig = {
   ),
   footer: {
     text: 'Pipilika Search Engine - The Untold Story',
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s | Pipilika Search Engine - The Untold Story",
+    }
   },
   feedback:{ content: null }, 
   editLink: { text: null }
