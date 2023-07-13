@@ -29,7 +29,12 @@ const config: DocsThemeConfig = {
     }
   },
   feedback:{ content: null }, 
-  editLink: { text: null }
+  editLink: { text: null },
+
+  i18n: [
+    { locale: 'en', text: 'English' },
+    { locale: 'bn', text: 'বাংলা' }
+  ]
 }
 
 export default config
