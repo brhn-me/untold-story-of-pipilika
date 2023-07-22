@@ -1,23 +1,11 @@
-# Nextra Docs Template 
+# Unveiling the Truth: The Intellectual Property Theft of "Pipilika" - Bangladesh's First Bengali Search Engine, and the Revealing of "Teacher" Dr. Ruhul Amin's True Face
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Pipilika Search Engine holds the distinction of being the first search engine in Bangladesh, specifically designed for the Bengali language. Its official launch in 2013 sparked widespread speculation and anticipation. It found its place in textbooks, received substantial funding, garnered media attention, and established a significant presence and reputation. However, hidden beneath the surface lies a dark history of Pipilika Search Engine.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+The original creators, Burhan and Chisti, were kept in the shadows, while an individual named Rahul Amin Sajib shamelessly claimed ownership, intellectual property, fame, and wealth associated with this technology. This appalling academic malpractice allowed him to enjoy the benefits of Pipilika, while misleading everyone with false information for nearly a decade. Shockingly, despite possessing substantial evidence, the original inventors chose to keep this shameful history concealed.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+This secrecy was maintained for years to protect the reputation of the university and the department. However, it has become evident that Rahul Amin Sajib's misdeeds extend beyond the realm of Pipilika. Similar stories have surfaced, implicating him in various unethical practices. The original inventors took their concerns to the Shahjalal University of Science and Technology (SUST) CSE department, submitting a written complaint with supporting evidence. However, for nearly two years, no satisfactory resolution has been reached, indicating a lack of willingness from those involved.
 
-## Quick Start
+Recently, the original inventors have uncovered additional wrongdoing by Rahul Amin Sajib. Having personally experienced the anguish of deprivation for many years, they understand the immense toll it takes on a student's mental health when subjected to such circumstances. As a result, they have taken to Facebook, publicly sharing the dark history of Pipilika's intellectual property theft through a series of episodes.
 
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+The intention behind this effort is to compile and preserve the episodes and evidence published on Facebook. If their story can prevent even one student from falling victim to academic malpractice, they will consider their endeavor a success.
