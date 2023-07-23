@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 
@@ -24,12 +25,30 @@ const config: DocsThemeConfig = {
     text: 'Pipilika Search Engine - The Untold Story',
   },
   useNextSeoProps() {
+    const { asPath, defaultLocale, locale } = useRouter()
+
+    const bn_title = '%s | পিপীলিকা সার্চ ইঞ্জিন: প্রতারণা এবং বেইমানির অপ্রকাশিত ইতিহাস'
+    const en_title = '%s | Pipilika Search Engine: A Hidden Tale of Deception and Betrayal'
+
+    let title_template = locale == 'bn' ? bn_title : en_title;
+
     return {
-      titleTemplate: "%s | Pipilika Search Engine - The Untold Story",
+      titleTemplate: title_template,
     }
   },
   feedback:{ content: null }, 
-  editLink: { text: null }
+  editLink: { text: null },
+  search: {
+    placeholder: () => {
+      const { asPath, defaultLocale, locale } = useRouter()
+      return locale == 'bn' ? 'অনুসন্ধান...': 'Search...';
+    }
+  },
+
+  i18n: [
+    { locale: 'en', text: 'English' },
+    { locale: 'bn', text: 'বাংলা' }
+  ]
 }
 
 export default config

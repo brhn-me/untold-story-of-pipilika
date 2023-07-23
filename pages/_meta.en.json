@@ -1,0 +1,16 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "stories": {
+    "title": "Untold Story",
+    "type": "page",
+    "href": "/stories/part1"
+  },
+  "evidences": {
+    "title": "Evidences",
+    "type": "page",
+    "href": "/evidences/proof1"
+  }
+}
