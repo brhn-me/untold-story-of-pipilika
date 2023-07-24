@@ -6,6 +6,12 @@ const withNextra = require('nextra')({
 module.exports = withNextra({
   i18n: {
     locales: ['en', 'bn'],
-    defaultLocale: 'bn'
+    defaultLocale: 'bn',
+    domains: [
+      {
+        domain: 'untold-story-of-pipilika.netlify.app',
+        defaultLocale: 'bn',
+      }
+    ]
   }
 })
