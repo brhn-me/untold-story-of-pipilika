@@ -16,7 +16,7 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Pipilika Search Engine - The Untold Story" />
+      <meta property="og:title" content="Pipilika Search Engine: A Hidden Tale of Deception and Betrayal" />
       <meta property="og:description" content="Revealing the unspoken dirty manipulation of Dr. Ruhul Amin during early days of the Pipilika Search Engine" />
       <link rel="icon" type="image/x-icon" href="/static/pipilika/favicon.ico"></link>
     </>
