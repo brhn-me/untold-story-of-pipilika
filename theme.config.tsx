@@ -1,10 +1,18 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { PipilikaSmall } from './components/pipilika';
 
 
 const config: DocsThemeConfig = {
-  logo: <span><img src='/static/pipilika/logo-small.png' /></span>,
+  logo: (
+    <>
+      <PipilikaSmall />
+      <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
+        
+      </span>
+    </>
+  ),
   logoLink: '/',
   // project: {
   //   link: 'https://github.com/shuding/nextra-docs-template',
