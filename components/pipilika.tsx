@@ -1,3 +1,4 @@
+import {Component} from 'react'
 
 function Pipilika(props) {
   let {width} = props;
@@ -70,7 +71,7 @@ function Pipilika(props) {
 }
 
 export function PipilikaSmall() {
-  return <Pipilika width="160" />
+  return <Pipilika width="140" />
 }
 
 export function PipilikaLarge() {
