@@ -22,7 +22,7 @@ const config: DocsThemeConfig = {
     </>
   ),
   footer: {
-    text: 'Pipilika Search Engine - The Untold Story',
+    text: 'Pipilika Search Engine: A Hidden Tale of Deception and Betrayal',
   },
   useNextSeoProps() {
     const { asPath, defaultLocale, locale } = useRouter()
