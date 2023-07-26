@@ -37,7 +37,7 @@ function Footer(){
 
 function TocText(){
   const { locale } = useRouter()
-  return locale == 'bn' ? 'এই পাতায়': 'On This Page';
+  return (<span>{locale == 'bn' ? 'এই পাতায়': 'On This Page'}</span>)
 }
 
 
@@ -112,7 +112,7 @@ const config: DocsThemeConfig = {
     }
   },
   toc: {
-    title: TocText
+    title: (<TocText />)
   },
 
   i18n: [
