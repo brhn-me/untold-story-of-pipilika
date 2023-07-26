@@ -25,19 +25,19 @@ Recently, more revelations about 'Ruhul Amin Shajib's' misdeeds have come to the
 The aim of this effort is to compile the episodes and evidence published on Facebook. If sharing our story can prevent even one student from falling victim to academic malpractice in the future, we will consider this endeavor a success.`
 
 
-function Footer(){
+function Copyright() {
   const { locale } = useRouter()
+  const text = '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
   return (
-    <span>
-      '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
-    </span>
+    <span>{text}</span>
   )
 }
 
 
-function TocText(){
+function TocText() {
   const { locale } = useRouter()
-  return (<span>{locale == 'bn' ? 'এই পাতায়': 'On This Page'}</span>)
+  const text = locale == 'bn' ? 'এই পাতায়' : 'On This Page'
+  return (<span>{text}</span>)
 }
 
 
@@ -68,7 +68,7 @@ const config: DocsThemeConfig = {
     let title = frontMatter.title
     let desc = frontMatter.description
 
-    if(locale == 'bn'){
+    if (locale == 'bn') {
       return (
         <>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,17 +83,17 @@ const config: DocsThemeConfig = {
 
     return (
       <>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="keywords" content="Dr. Ruhul Amin Shajib, Pipilika Search Engine, Pipilika, shajibsust, Academic Malpractice, IP Fraud, SUST, CSE" />
-          <meta property="og:title" content={title || TITLE_EN} />
-          <meta property="og:description" content={desc || DESC_EN} />
-          <meta property="og:image" content="/static/pipilika/pipilika.png" />
-          <link rel="icon" type="image/x-icon" href="/static/pipilika/favicon.ico"></link>
-        </>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Dr. Ruhul Amin Shajib, Pipilika Search Engine, Pipilika, shajibsust, Academic Malpractice, IP Fraud, SUST, CSE" />
+        <meta property="og:title" content={title || TITLE_EN} />
+        <meta property="og:description" content={desc || DESC_EN} />
+        <meta property="og:image" content="/static/pipilika/pipilika.png" />
+        <link rel="icon" type="image/x-icon" href="/static/pipilika/favicon.ico"></link>
+      </>
     )
   },
   footer: {
-    component: (<Footer/>)
+    text: (<Copyright />)
   },
   useNextSeoProps() {
     const { locale } = useRouter()
@@ -101,14 +101,14 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s | ' + (locale == 'bn' ? TITLE_BN : TITLE_EN),
     }
   },
-  feedback:{ content: null }, 
-  editLink: { 
+  feedback: { content: null },
+  editLink: {
     component: LanguageTextSwitcher
   },
   search: {
     placeholder: () => {
       const { locale } = useRouter()
-      return locale == 'bn' ? 'অনুসন্ধান...': 'Search...';
+      return locale == 'bn' ? 'অনুসন্ধান...' : 'Search...';
     }
   },
   toc: {
