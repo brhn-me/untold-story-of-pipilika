@@ -25,9 +25,13 @@ Recently, more revelations about 'Ruhul Amin Shajib's' misdeeds have come to the
 The aim of this effort is to compile the episodes and evidence published on Facebook. If sharing our story can prevent even one student from falling victim to academic malpractice in the future, we will consider this endeavor a success.`
 
 
-function footerText(){
+function Footer(){
   const { locale } = useRouter()
-  return '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
+  return (
+    <span>
+      '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
+    </span>
+  )
 }
 
 
@@ -83,7 +87,7 @@ const config: DocsThemeConfig = {
     )
   },
   footer: {
-    text: footerText
+    component: Footer
   },
   useNextSeoProps() {
     const { locale } = useRouter()
