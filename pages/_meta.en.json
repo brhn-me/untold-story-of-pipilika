@@ -12,5 +12,10 @@
     "title": "Evidences",
     "type": "page",
     "href": "/evidences/proof1"
+  },
+  "infographics": {
+    "title": "Infographics",
+    "type": "page",
+    "href": "/infographics/ig1"
   }
 }

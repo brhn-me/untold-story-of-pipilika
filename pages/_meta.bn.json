@@ -12,5 +12,10 @@
     "title": "প্রমানসমূহ",
     "type": "page",
     "href": "/evidences/proof1"
+  },
+  "infographics": {
+    "title": "ইনফোগ্রাফিকস",
+    "type": "page",
+    "href": "/infographics/ig1"
   }
 }
