@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import { PipilikaSmall } from './components/pipilika';
 import { LanguageNavbarSwitcher, LanguageTextSwitcher } from './components/languageSwitcher';
 
@@ -25,6 +25,12 @@ Recently, more revelations about 'Ruhul Amin Shajib's' misdeeds have come to the
 The aim of this effort is to compile the episodes and evidence published on Facebook. If sharing our story can prevent even one student from falling victim to academic malpractice in the future, we will consider this endeavor a success.`
 
 
+function footerText(){
+  const { locale } = useRouter()
+  return '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
+}
+
+
 const config: DocsThemeConfig = {
   logo: (
     <>
@@ -43,15 +49,22 @@ const config: DocsThemeConfig = {
     extraContent: LanguageNavbarSwitcher,
   },
   head: () => {
-    const { locale } = useRouter();
+    const { asPath, defaultLocale, locale } = useRouter()
+    const { frontMatter } = useConfig()
+    const url =
+      'https://untold-story-of-pipilika.vercel.app' +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+
+    let title = frontMatter.title
+    let desc = frontMatter.description
 
     if(locale == 'bn'){
       return (
         <>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="keywords" content="রুহুল আমিন সজীব, পিপীলিকা সার্চ ইঞ্জিন, পিপীলিকা, সজীবসাস্ট, শাবিপ্রবি, সিএসই, থিসিস চুরি, মেধাস্বত্ত চোর" />
-          <meta property="og:title" content={TITLE_BN} />
-          <meta property="og:description" content={DESC_BN} />
+          <meta property="og:title" content={title || TITLE_BN} />
+          <meta property="og:description" content={desc || DESC_BN} />
           <meta property="og:image" content="/static/pipilika/pipilika.png" />
           <link rel="icon" type="image/x-icon" href="/static/pipilika/favicon.ico"></link>
         </>
@@ -62,18 +75,15 @@ const config: DocsThemeConfig = {
       <>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="keywords" content="Dr. Ruhul Amin Shajib, Pipilika Search Engine, Pipilika, shajibsust, Academic Malpractice, IP Fraud, SUST, CSE" />
-          <meta property="og:title" content={TITLE_EN} />
-          <meta property="og:description" content={DESC_EN} />
+          <meta property="og:title" content={title || TITLE_EN} />
+          <meta property="og:description" content={desc || DESC_EN} />
           <meta property="og:image" content="/static/pipilika/pipilika.png" />
           <link rel="icon" type="image/x-icon" href="/static/pipilika/favicon.ico"></link>
         </>
     )
   },
   footer: {
-    text: () => {
-      const { locale } = useRouter()
-      return '© ' + (locale == 'bn' ? TITLE_BN : TITLE_EN);
-    }
+    text: footerText
   },
   useNextSeoProps() {
     const { locale } = useRouter()
