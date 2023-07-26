@@ -32,7 +32,7 @@ export function LanguageNavbarSwitcher() {
   const { locale, pathname } = useRouter()
 
   let url = "/"
-  let text = "EN"
+  let text = "English"
   let targetLocate = "en"
 
   if (locale == "bn" && pathname.endsWith(".bn")){
@@ -41,12 +41,14 @@ export function LanguageNavbarSwitcher() {
   } else if(locale == "en" && pathname.endsWith(".en")){
       url = pathname.substring(0, pathname.length - 3);
       targetLocate = "bn"
-      text = "অ"
+      text = "বাংলা"
   }
 
   return (
-    <Link href={url} locale={targetLocate}>
-      <Button >{text}</Button>        
+    <nav>
+      <Link className="nx-text-sm contrast-more:nx-text-gray-700 contrast-more:dark:nx-text-gray-100 nx-relative -nx-ml-2 nx-hidden nx-whitespace-nowrap nx-p-2 md:nx-inline-block nx-font-medium nx-subpixel-antialiased" href={url} locale={targetLocate}>
+      <span style={{border: '1px solid rgba(107,114,128); padding: 6px 15px', borderRadius: '10px', color: 'rgba(107,114,128)'}}>{text}</span>
       </Link>
+    </nav>    
     )
 }
