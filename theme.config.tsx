@@ -35,6 +35,12 @@ function Footer(){
 }
 
 
+function TocText(){
+  const { locale } = useRouter()
+  return locale == 'bn' ? 'এই পাতায়': 'On This Page';
+}
+
+
 const config: DocsThemeConfig = {
   logo: (
     <>
@@ -87,7 +93,7 @@ const config: DocsThemeConfig = {
     )
   },
   footer: {
-    component: Footer
+    component: (<Footer/>)
   },
   useNextSeoProps() {
     const { locale } = useRouter()
@@ -106,10 +112,7 @@ const config: DocsThemeConfig = {
     }
   },
   toc: {
-    title: () => {
-      const { locale } = useRouter()
-      return locale == 'bn' ? 'এই পাতায়': 'On This Page';
-    }
+    title: (<TocText/>)
   },
 
   i18n: [
