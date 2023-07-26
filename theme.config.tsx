@@ -112,7 +112,7 @@ const config: DocsThemeConfig = {
     }
   },
   toc: {
-    title: (<TocText/>)
+    title: TocText
   },
 
   i18n: [
