@@ -1,0 +1,3 @@
+img[src$='#centered'] { 
+    margin: 0 auto;
+}
