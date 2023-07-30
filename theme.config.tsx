@@ -73,6 +73,7 @@ const config: DocsThemeConfig = {
         <>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="keywords" content="রুহুল আমিন সজীব, পিপীলিকা সার্চ ইঞ্জিন, পিপীলিকা, সজীবসাস্ট, শাবিপ্রবি, সিএসই, থিসিস চুরি, মেধাস্বত্ত চোর" />
+          <meta name="google-site-verification" content="w1BEDw0uM5rTD_B9K0heLZ17f1Cx0sTDvuS0hm1n4iA" />
           <meta property="og:title" content={title || TITLE_BN} />
           <meta property="og:description" content={desc || DESC_BN} />
           <meta property="og:image" content="/static/pipilika/pipilika.png" />
