@@ -1,3 +1,11 @@
 img[src$='#centered'] { 
     margin: 0 auto;
 }
+
+article main a.nx-text-primary-600{
+    color: #eb252c;
+}
+
+article main a.nx-text-primary-600:hover{
+    color: #ff0000;
+}
